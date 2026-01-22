@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RiskIntel Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #060606;
+  --panel: #121212;
+  --text: #ffffff;
+  --muted: #8c8c8c;
+  --accent: #00ffa3;
+  --warn: #ffb020;
+  --danger: #ff4d4d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* HEADER */
+header {
+  padding: 20px;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* DASHBOARD */
+.dashboard {
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+/* CARDS */
+.card {
+  background: var(--panel);
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #1f1f1f;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+.value {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* STATUS COLORS */
+.green { color: var(--accent); }
+.yellow { color: var(--warn); }
+.red { color: var(--danger); }
+
+/* GRID SPLIT */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* PORTFOLIO ROW */
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #1f1f1f;
+  font-size: 0.85rem;
+}
+
+/* FOOTER NOTE */
+.note {
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.4;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>📊 RiskIntel Dashboard</h1>
+</header>
+
+<div class="dashboard">
+
+  <!-- TOP SIGNALS -->
+  <div class="split">
+    <div class="card">
+      <h3>Market Risk</h3>
+      <div class="value yellow">Neutral</div>
+      <div class="muted">Liquidity mixed</div>
+    </div>
+    <div class="card">
+      <h3>Global Sentiment</h3>
+      <div class="value green">Risk-On</div>
+      <div class="muted">Selective exposure</div>
+    </div>
+  </div>
+
+  <!-- NARRATIVES -->
+  <div class="card">
+    <h3>🟢 Equity Narrative</h3>
+    <p class="muted">
+      Large-cap strength driven by liquidity rotation, not earnings expansion.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🟡 Crypto Narrative</h3>
+    <p class="muted">
+      Momentum sustained only if ETF inflows remain consistent over short term.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🔴 Macro Risk Watch</h3>
+    <p class="muted">
+      Prolonged high-rate environment increases downside risk for leveraged assets.
+    </p>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <div class="card">
+    <h3>Model Portfolio Snapshot</h3>
+
+    <div class="row">
+      <span>Large Cap Equities</span>
+      <span>40%</span>
+    </div>
+    <div class="row">
+      <span>Thematic / Growth</span>
+      <span>25%</span>
+    </div>
+    <div class="row">
+      <span>Crypto Assets</span>
+      <span>15%</span>
+    </div>
+    <div class="row">
+      <span>Cash / Defensive</span>
+      <span>20%</span>
+    </div>
+  </div>
+
+  <!-- SCENARIOS -->
+  <div class="card">
+    <h3>Scenario Outlook</h3>
+    <p class="green"><strong>Bull (30%)</strong> – Liquidity expansion resumes</p>
+    <p class="muted"><strong>Base (45%)</strong> – Range-bound, selective alpha</p>
+    <p class="red"><strong>Bear (25%)</strong> – Growth shock, risk-off</p>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="card">
+    <p class="note">
+      This dashboard provides research-based market intelligence and scenario analysis.
+      It is not financial advice or a recommendation to buy or sell any asset.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
