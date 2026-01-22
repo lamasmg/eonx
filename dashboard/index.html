@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RiskIntel | Market Intelligence Platform</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #070707;
+  --panel: #111;
+  --text: #ffffff;
+  --muted: #9b9b9b;
+  --accent: #00ffa3;
+  --danger: #ff4d4d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* HERO */
+header {
+  padding: 110px 20px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top, #1a1a1a 0%, #000 60%);
+}
+
+header h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+header p {
+  max-width: 720px;
+  margin: 25px auto;
+  color: var(--muted);
+}
+
+.cta {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, var(--accent), #00b3ff);
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--panel);
+  padding: 32px;
+  border-radius: 18px;
+  border: 1px solid #1f1f1f;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+/* PORTFOLIO */
+.portfolio {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #222;
+  padding: 16px 0;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #1c1c1c;
+}
+
+/* SCENARIOS */
+.scenario {
+  margin-bottom: 20px;
+}
+
+.bull { color: var(--accent); }
+.bear { color: var(--danger); }
+
+/* DISCLAIMER */
+.disclaimer {
+  font-size: 13px;
+  color: #777;
+  border-top: 1px solid #222;
+  padding-top: 30px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Risk Intelligence for Smarter Investing</h1>
+  <p>
+    We analyze capital flows, market narratives, and risk scenarios to help investors
+    make informed decisions — not blind bets.
+  </p>
+  <a class="cta" href="#research">View Research</a>
+</header>
+
+<section id="pillars">
+  <h2 class="section-title">Our Intelligence Framework</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📊 Market Narratives</h3>
+      <p>
+        We track where capital is rotating and why.
+        Price follows narrative — not the other way around.
+      </p>
+    </div>
+    <div class="card">
+      <h3>💼 Model Portfolios</h3>
+      <p>
+        Transparent allocation models with defined risk bands,
+        time horizons, and invalidation points.
+      </p>
+    </div>
+    <div class="card">
+      <h3>🔮 Scenario Forecasting</h3>
+      <p>
+        Bull, base, and bear cases with probability weightings —
+        no guarantees, only logic.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <h2 class="section-title">Latest Intelligence</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Equities: Liquidity Rotation</h3>
+      <p>
+        Recent rallies are driven more by liquidity reallocation than earnings growth.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Crypto: ETF Flow Watch</h3>
+      <p>
+        Bitcoin momentum remains dependent on sustained institutional inflows.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Macro: Rate Sensitivity</h3>
+      <p>
+        Risk assets remain fragile under prolonged high-rate conditions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2 class="section-title">Model Portfolio (Example)</h2>
+
+  <div class="portfolio">
+    <span>Large Cap Equities</span>
+    <span>40% <span class="tag">Moderate Risk</span></span>
+  </div>
+  <div class="portfolio">
+    <span>Growth / Thematic</span>
+    <span>25% <span class="tag">High Volatility</span></span>
+  </div>
+  <div class="portfolio">
+    <span>Crypto Assets</span>
+    <span>15% <span class="tag">Speculative</span></span>
+  </div>
+  <div class="portfolio">
+    <span>Cash / Defensive</span>
+    <span>20% <span class="tag">Risk Buffer</span></span>
+  </div>
+</section>
+
+<section id="scenarios">
+  <h2 class="section-title">Market Scenarios (Illustrative)</h2>
+
+  <div class="scenario bull">
+    <strong>Bull Case (30%)</strong> — Rates peak, liquidity expands, risk assets outperform.
+  </div>
+  <div class="scenario">
+    <strong>Base Case (45%)</strong> — Range-bound markets with selective sector strength.
+  </div>
+  <div class="scenario bear">
+    <strong>Bear Case (25%)</strong> — Growth slowdown triggers capital flight to safety.
+  </div>
+
+  <div class="disclaimer">
+    This platform provides educational research and scenario analysis.
+    It does not constitute financial advice or investment recommendations.
+  </div>
+</section>
+
+<footer>
+  © 2026 RiskIntel • Market Intelligence Platform
+</footer>
+
+</body>
+</html>
